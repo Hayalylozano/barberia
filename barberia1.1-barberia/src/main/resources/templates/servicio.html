@@ -19,7 +19,7 @@
         </thead>
         <tbody>
         <tr th:each="servicio:${servicio}">
-            <td th:number="${servicio.ser_inicio_hora}">${servicio.ser_inicio_hora}</td>
+            <td th:time="${servicio.ser_inicio_hora}">${servicio.ser_inicio_hora}</td>
             <td th:time="${servicio.ser_final_hora}">${servicio.ser_final_hora}</td>
             <td th:text="${servicio.ser_observacion}">${servicio.ser_observacion}</td>
             <td>
