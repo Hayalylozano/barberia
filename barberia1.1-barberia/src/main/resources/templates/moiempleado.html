@@ -34,19 +34,15 @@
           <label  class="col-md-2">Direccion</label>
           <input th:field="*{emp_direccion}" type="text" class="from-control"/>
         </div>
-        <div class="form-group">
-          <label class="col-md-2">tipo empl</label>
-          <input th:field="*{tip_empleado}" type="number" class="from-control"/>
-        </div>
-          <!--<div class="form-group row">
+          <div class="form-group row">
            <label class="col-md-2">Tipo</label>
-           <select th:field="*{tip_empleado}" class="from-control form-control-sm- col-md-6">
+           <select th:field="*{tip_empleado}" class="from-control form-control-sm- col-md-6" >
               <option th:each="tipoempleado:${tipoempleado}"
                       th:value="${tipoempleado.tip_em_id}"
-                      th:text="${tipoempleado.tip_em_id}">
+                      th:text="${tipoempleado.tip_emp_nombre}">
               </option>
            </select>
-         </div>-->
+         </div>
         <div class="card-footer"></div>
         <input type="submit" value="Guardar" class="btn btn-success"/>
         <a href="/empleado" class="btn btn-success">Volver</a>

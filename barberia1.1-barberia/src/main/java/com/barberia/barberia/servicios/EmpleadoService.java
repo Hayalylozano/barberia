@@ -2,6 +2,7 @@ package com.barberia.barberia.servicios;
 
 import com.barberia.barberia.interfaces.Iempleado;
 import com.barberia.barberia.interfacesServicios.IServicesEmpleado;
+import com.barberia.barberia.interfacesServicios.IServicestipoEmpleado;
 import com.barberia.barberia.modelo.empleado;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

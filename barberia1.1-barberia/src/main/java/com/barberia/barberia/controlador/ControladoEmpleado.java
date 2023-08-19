@@ -1,7 +1,9 @@
 package com.barberia.barberia.controlador;
 
 import com.barberia.barberia.interfacesServicios.IServicesEmpleado;
+import com.barberia.barberia.interfacesServicios.IServicestipoEmpleado;
 import com.barberia.barberia.modelo.empleado;
+import com.barberia.barberia.modelo.tipoempleado;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,8 @@ public class ControladoEmpleado {
 
     @Autowired
     private IServicesEmpleado services;
+    @Autowired
+    private IServicestipoEmpleado servicestp;
 
     @GetMapping("/empleado")
     public String listar (Model model){
@@ -28,6 +32,8 @@ public class ControladoEmpleado {
 
     @GetMapping("/nuevoempleado")
     public String agregar(Model model){
+        List<tipoempleado> tipoempleado= servicestp.listar();
+        model.addAttribute("tipoempleado",tipoempleado);
         model.addAttribute("empleado",new empleado());
         return "moiempleado";
     }

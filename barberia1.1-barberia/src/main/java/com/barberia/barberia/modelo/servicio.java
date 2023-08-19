@@ -2,6 +2,7 @@ package com.barberia.barberia.modelo;
 
 import jakarta.persistence.*;
 
+import java.sql.Date;
 import java.sql.Time;
 
 @Entity
@@ -13,8 +14,8 @@ public class servicio {
     private int cli_id;
     private int cort_id;
     private int emp_id;
-    private Time ser_inicio_hora;
-    private Time ser_final_hora;
+    private String ser_inicio_hora;
+    private String ser_final_hora;
     private String ser_observacion;
     private int ser_cancela;
 
@@ -22,7 +23,7 @@ public class servicio {
 
     }
 
-    public servicio(int ser_id, int cli_id, int cort_id, int emp_id, Time ser_inicio_hora, Time ser_final_hora, String ser_observacion, int ser_cancela) {
+    public servicio(int ser_id, int cli_id, int cort_id, int emp_id, String ser_inicio_hora, String ser_final_hora, String ser_observacion, int ser_cancela) {
         super();
         this.ser_id = ser_id;
         this.cli_id = cli_id;
@@ -66,19 +67,19 @@ public class servicio {
         this.emp_id = emp_id;
     }
 
-    public Time getSer_inicio_hora() {
+    public String getSer_inicio_hora() {
         return ser_inicio_hora;
     }
 
-    public void setSer_inicio_hora(Time ser_inicio_hora) {
+    public void setSer_inicio_hora(String ser_inicio_hora) {
         this.ser_inicio_hora = ser_inicio_hora;
     }
 
-    public Time getSer_final_hora() {
+    public String getSer_final_hora() {
         return ser_final_hora;
     }
 
-    public void setSer_final_hora(Time ser_final_hora) {
+    public void setSer_final_hora(String ser_final_hora) {
         this.ser_final_hora = ser_final_hora;
     }
 

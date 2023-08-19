@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Servicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
@@ -19,8 +19,8 @@
         </thead>
         <tbody>
         <tr th:each="servicio:${servicio}">
-            <td th:time="${servicio.ser_inicio_hora}">${servicio.ser_inicio_hora}</td>
-            <td th:time="${servicio.ser_final_hora}">${servicio.ser_final_hora}</td>
+            <td th:text="${servicio.ser_inicio_hora}">${servicio.ser_inicio_hora}</td>
+            <td th:text="${servicio.ser_final_hora}">${servicio.ser_final_hora}</td>
             <td th:text="${servicio.ser_observacion}">${servicio.ser_observacion}</td>
             <td>
                 <!--<a th:href="@{/editar/}+${cortes.id_corte}" class="btn btn-warning">Editar</a>-->
