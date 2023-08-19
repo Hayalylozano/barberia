@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Empleado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-4">
+  <a th:href="@{/nuevoempleado}" class="btn btn-primary">Insetar corte</a><br>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Documento</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Telefono</th>
+      <th>Direccion</th>
+      <th>Tipo emp</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="empleado:${empleado}">
+      <td th:text="${empleado.emp_documento}">${empleado.emp_documento}</td>
+      <td th:text="${empleado.emp_nombre}">${empleado.emp_nombre}</td>
+      <td th:text="${empleado.emp_apellido}">${empleado.emp_apellido}</td>
+      <td th:text="${empleado.emp_telefono}">${empleado.emp_telefono}</td>
+      <td th:text="${empleado.emp_direccion}">${empleado.emp_direccion}</td>
+      <td th:text="${empleado.tip_empleado}">${empleado.tip_empleado}</td>
+      <td>
+        <!--<a th:href="@{/editar/}+${cortes.id_corte}" class="btn btn-warning">Editar</a>-->
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

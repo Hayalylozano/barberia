@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Producto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-4">
+    <a th:href="@{/nuevoprodu}" class="btn btn-primary">Insetar producto</a>
+    <table class="table">
+        <thead>
+        <tr>
+            <!-- <th>Id</th>-->
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Descripcion</th>
+            <th>Existencia</th>
+        </tr>
+        </thead>
+        <tbody>
+
+   <tr th:each="producto:${producto}">
+       <td th:text="${producto.pro_nombre}">${producto.pro_nombre}</td>
+       <td th:text="${producto.pro_codigo}">${producto.pro_codigo}</td>
+       <td th:text="${producto.pro_descripcion}">${producto.pro_descripcion}</td>
+       <td th:text="${producto.pro_existencia}">${producto.pro_existencia}</td>
+       <td>
+           <!--<a class="btn btn-warning">Editar</a>-->
+       </td>
+   </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

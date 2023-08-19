@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Servicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-4">
+    <div class="col-sm-6">
+        <form th:action="@{/guardarservi}" th:object="${servicio}" method="post">
+            <div class="card">
+                <div class="card-header"></div>
+                <h3>Insertar tipo empleado</h3>
+                <div class="card-body"></div>
+                <div class="form-group">
+                    <label class="col-md-2">ID cliente</label>
+                    <input th:field="*{cli_id}" type="number" class="from-control"/>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">ID corte</label>
+                    <input th:field="*{cort_id}" type="number" class="from-control"/>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">ID empleado</label>
+                    <input th:field="*{emp_id}" type="number" class="from-control"/>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">Inicio hora</label>
+                    <input th:field="*{ser_inicio_hora}" type="time" class="from-control"/>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">Final hora</label>
+                    <input th:field="*{ser_final_hora}" type="time" class="from-control"/>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">Observacion</label>
+                    <input th:field="*{ser_observacion}" type="text" class="from-control"/>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">Cancela</label>
+                    <input th:field="*{ser_cancela}" type="number" class="from-control"/>
+                </div>
+
+                <div class="card-footer"></div>
+                <input type="submit" value="Guardar" class="btn btn-success"/>
+                <a href="http://localhost:8080" class="btn btn-success">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

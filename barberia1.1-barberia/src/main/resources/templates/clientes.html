@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-4">
+    <a th:href="@{/nuevocliente}" class="btn btn-primary">Insetar cliente</a><br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Identificacion</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="clientes:${clientes}">
+            <td th:text="${clientes.cli_documento}">${clientes.cli_documento}</td>
+            <td th:text="${clientes.cli_nombre}">${clientes.cli_nombre}</td>
+            <td th:text="${clientes.cli_apellido}">${clientes.cli_apellido}</td>
+            <td th:text="${clientes.cli_telefono}">${clientes.cli_telefono}</td>
+            <td th:text="${clientes.cli_direccion}">${clientes.cli_direccion}</td>
+            <td>
+              <!--  <a th:href="@{/editar/}+${cortes.id_corte}" class="btn btn-warning">Editar</a>-->
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

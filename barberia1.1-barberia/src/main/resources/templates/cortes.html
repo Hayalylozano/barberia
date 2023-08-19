@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Cortes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-4">
+    <a class="dropdown-item" href="http://localhost:8080">Inicio</a>
+    <a th:href="@{/new}" class="btn btn-primary">Insetar corte</a><br>
+    <table class="table">
+        <thead>
+            <tr>
+               <!-- <th>IDE</th>-->
+                <th>NOMBRE</th>
+                <th>PRECIO</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr th:each="cortes:${cortes}">
+           <!-- <td th:text="${cortes.id_corte}">${cortes.id_corte}</td>-->
+            <td th:text="${cortes.cor_nombre}">${cortes.cor_nombre}</td>
+            <td th:text="${cortes.cor_precio}">${cortes.cor_precio}</td>
+            <td>
+                <a th:href="@{/editar/}+${cortes.id_corte}" class="btn btn-warning">Editar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
