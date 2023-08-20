@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Compra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-4">
+    <a th:href="@{/nuevocompra}" class="btn btn-primary">Insetar compra</a><br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>id producto</th>
+            <th>id proveedor</th>
+            <th>fecha</th>
+            <th>cantidad</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="compra:${compra}">
+            <td th:number="${compra.pro_id}">${compra.pro_id}</td>
+            <td th:number="${compra.prov_id}">${compra.prov_id}</td>
+            <td th:number="${compra.comp_precio_total}">${compra.comp_precio_total}</td>
+            <td th:number="${compra.comp_cantidad}">${compra.comp_cantidad}</td>
+            <td>
+                <!--<a class="btn btn-warning">Editar</a>-->
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

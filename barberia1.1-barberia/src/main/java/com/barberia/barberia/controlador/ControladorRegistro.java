@@ -38,6 +38,6 @@ public class ControladorRegistro {
     public String editar(@PathVariable int idReg, Model model){
         Optional<registro> registros =services.listarIdR(idReg);
         model.addAttribute("registro",registros);
-        return "moirefistror";
+        return "moiregistro";
     }
 }
