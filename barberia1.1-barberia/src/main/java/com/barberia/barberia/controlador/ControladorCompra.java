@@ -1,10 +1,7 @@
 package com.barberia.barberia.controlador;
 
 import com.barberia.barberia.interfacesServicios.IServicesCompra;
-import com.barberia.barberia.interfacesServicios.IServicesCortes;
 import com.barberia.barberia.modelo.compra;
-import com.barberia.barberia.modelo.cortes;
-import com.barberia.barberia.modelo.registro;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
